@@ -1,0 +1,5 @@
+DOCKER en 12 minutes : https://www.youtube.com/watch?v=YFl2mCHdv24
+DOCKER exemple : https://jonnylangefeld.github.io/learning/Docker/How%2Bto%2BDocker.html
+
+
+NGINX avec html : https://medium.com/@jgefroh/a-guide-to-using-nginx-for-static-websites-d96a9d034940
