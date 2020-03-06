@@ -1,5 +1,37 @@
 DOCKER en 12 minutes : https://www.youtube.com/watch?v=YFl2mCHdv24
 DOCKER exemple : https://jonnylangefeld.github.io/learning/Docker/How%2Bto%2BDocker.html
 
+build une image docker et --rm pour supprimer l'historique docker
+    docker build -t server . --rm 
+
+run une image :
+    docker run -it --rm server bash
+
+run avec le volume :
+    docker run -it --rm -v ~/19/ft_server/srcs:/var/www server bash
+
+Supprimer tous les containeurs :
+    docker rm $(docker ps -a -q)
 
 NGINX avec html : https://medium.com/@jgefroh/a-guide-to-using-nginx-for-static-websites-d96a9d034940
+
+server {
+        listen 80;
+        listen [::]:80;
+
+        server_name example.com;
+
+        root /var/www/website/website;
+        index monsite.html;
+        autoindex on;
+
+        location / {
+                try_files $uri $uri/ =404;
+        }
+}
+
+adresse ip de la machine virtuelle :
+    docker-machine env
+
+Avoir un shell dans le docker qui run :
+    docker exec -it <container ID> /bin/bash

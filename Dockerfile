@@ -6,7 +6,7 @@
 #    By: douatla <douatla@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/04 15:58:22 by douatla           #+#    #+#              #
-#    Updated: 2020/03/05 20:37:57 by douatla          ###   ########.fr        #
+#    Updated: 2020/03/06 23:29:33 by douatla          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,12 +17,13 @@ FROM debian:buster
 RUN apt-get upgrade && apt-get update
 RUN apt-get install -y nginx
 RUN apt-get install -y vim
-run apt-get install -y curl
+RUN apt-get install -y curl
 
 RUN echo "alias ll='ls -la'" >> ~/.bashrc
 
 ADD ./srcs/ /var/www/srcs
 
 RUN cat /var/www/srcs/server.conf > /etc/nginx/sites-available/default
+RUN cat /var/www/srcs/nginx.conf > /etc/nginx/nginx.conf
 
-RUN mv /etc/nginx/sites-available/defaut /etc/nginx/sites-available/myconfig 
+CMD /usr/sbin/nginx -g "daemon off;"
