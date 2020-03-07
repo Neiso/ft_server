@@ -6,7 +6,7 @@
 #    By: douatla <douatla@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/04 15:58:22 by douatla           #+#    #+#              #
-#    Updated: 2020/03/06 23:29:33 by douatla          ###   ########.fr        #
+#    Updated: 2020/03/07 13:36:32 by douatla          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,7 @@ RUN apt-get upgrade && apt-get update
 RUN apt-get install -y nginx
 RUN apt-get install -y vim
 RUN apt-get install -y curl
+RUN apt-get install -y mysql
 
 RUN echo "alias ll='ls -la'" >> ~/.bashrc
 

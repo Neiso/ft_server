@@ -35,3 +35,7 @@ adresse ip de la machine virtuelle :
 
 Avoir un shell dans le docker qui run :
     docker exec -it <container ID> /bin/bash
+
+Pour utiliser my sql (MariaDB) :
+    service mysql start;
+    mariadb;
