@@ -7,9 +7,6 @@ build une image docker et --rm pour supprimer l'historique docker
 run une image :
     docker run -it --rm server bash
 
-run avec le volume :
-    docker run -it --rm -v ~/19/ft_server/srcs:/var/www server bash
-
 Supprimer tous les containeurs :
     docker rm $(docker ps -a -q)
 
@@ -39,3 +36,6 @@ Avoir un shell dans le docker qui run :
 Pour utiliser my sql (MariaDB) :
     service mysql start;
     mariadb;
+
+Pour utiliser php, il faut demarrer le serveur de compilation:
+    service php7.3-fpm;
